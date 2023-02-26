@@ -70,7 +70,7 @@
 
         <target.dir>target/artifacts/tic-taac</target.dir>
 
-        <xchart.version>3.8.1</xchart.version>
+        <xchart.version>3.8.3</xchart.version>
         <junit.version>5.8.1</junit.version>
     </properties>
 
@@ -323,8 +323,7 @@
                         </goals>
                         <configuration>
                             <target>
-                                <copy file="target/tictaac-${project.version}.jar"
-                                      tofile="${target.dir}/lib/tictaac-${project.version}.jar"/>
+                                <copy file="target/tictaac-${project.version}.jar" tofile="${target.dir}/lib/tictaac-${project.version}.jar"/>
                             </target>
                         </configuration>
                     </execution>
@@ -336,9 +335,7 @@
                         </goals>
                         <configuration>
                             <target>
-                                <zip destfile="${project.build.directory}/tic-taac-${project.version}-release.zip"
-                                     update="true"
-                                     comment="TicTaaC Threat Modeling">
+                                <zip destfile="${project.build.directory}/tic-taac-${project.version}-release.zip" update="true" comment="TicTaaC Threat Modeling">
                                     <fileset dir="${project.build.directory}/artifacts"/>
                                 </zip>
                             </target>
